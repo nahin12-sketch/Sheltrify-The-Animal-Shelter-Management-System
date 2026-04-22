@@ -104,7 +104,7 @@ class ShelterSystem {
                 adopt();
             } 
             else{
-                System.out.println("kamsahamnida");
+                System.out.println("kamsahamnida!");
                 break;
             }
         }
