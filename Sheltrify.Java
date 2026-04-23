@@ -36,19 +36,19 @@ abstract class Animal{
     abstract void display();
 }
 
-class PetAnimal extends Animal {
+class PetAnimal extends Animal{
 
     PetAnimal(int id, String name, int age){
         super(id, name, age);
     }
 
     @Override
-    void display() {
+    void display(){
         System.out.println(getId() + " " + getName() + " " + getAge() + " : " + (isAdopted() ? "Adopted" : "Available"));
     }
 }
 
-class ShelterSystem {
+class ShelterSystem{
 
     PetAnimal a1 = new PetAnimal(1, "Dog", 2);
     PetAnimal a2 = new PetAnimal(2, "Cat", 1);
@@ -68,32 +68,32 @@ class ShelterSystem {
         } 
     }
 
-    void adopt() {
+    void adopt(){
         System.out.print("Enter ID: ");
         int id = sc.nextInt();
 
-        if (a1 != null && a1.getId() == id) {
+        if (a1 != null && a1.getId() == id){
             a1.setAdopted(true);
             System.out.println("Adopted: " + a1.getName());
             a1 = null;
         }
-        else if (a2 != null && a2.getId() == id) {
+        else if (a2 != null && a2.getId() == id){
             a2.setAdopted(true);
             System.out.println("Adopted: " + a2.getName());
             a2 = null;
         }
-        else if (a3 != null && a3.getId() == id) {
+        else if (a3 != null && a3.getId() == id){
             a3.setAdopted(true);
             System.out.println("Adopted: " + a3.getName());
             a3 = null;
         }
-        else {
+        else{
             System.out.println("Not found or already adopted");
         }
     }
 
-    void menu() {
-        while (true) {
+    void menu(){
+        while (true){
             System.out.println("\n1.View 2.Adopt 3.Exit");
             int ch = sc.nextInt();
 
@@ -113,7 +113,7 @@ class ShelterSystem {
 
 
 public class Main{
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
         Scanner sc = new Scanner(System.in);
 
