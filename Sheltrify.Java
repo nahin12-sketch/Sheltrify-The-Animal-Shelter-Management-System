@@ -56,7 +56,7 @@ class ShelterSystem{
 
     Scanner sc = new Scanner(System.in);
 
-    void view() {
+    void view(){
         if (a1 != null){
             a1.display();
         } 
